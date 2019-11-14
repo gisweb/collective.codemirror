@@ -145,6 +145,11 @@ if (document.getElementsByClassName == undefined) {
     for (var i = areas.length - 1; i >= 0; i--) {
       convert_textarea(areas[i], 'xml');
     };
+
+    var area = document.getElementById("FormLayout");
+    if (area)
+      convert_textarea(area, 'html');
+
   }
   bodyOnLoad(function() {
     if (!window.CodeMirror) {
